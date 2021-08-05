@@ -1,1 +1,347 @@
-batas fritas
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#"
+     xml:base="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studies">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studies"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studies"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#teaches">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#teaches"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#teaches"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#first_name">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#last_name">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#staffID -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#staffID">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studentID -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#studentID">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CSModule -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CSModule">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#MathModule -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#MathModule">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Module"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS101 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS101">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CSModule"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS103 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS103">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CSModule"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer"/>
+            </owl:Restriction>
+        </rdf:type>
+        <teaches rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS103"/>
+        <teaches rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larisa</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soldatova</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">417686</staffID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M201 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M201">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#MathModule"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M204 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M204">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#MathModule"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+            </owl:Restriction>
+        </rdf:type>
+        <studies rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS101"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+            </owl:Restriction>
+        </rdf:type>
+        <studies rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS101"/>
+        <studies rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M201"/>
+        <studies rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josef</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baker</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">266814</studentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student3 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student3">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+            </owl:Restriction>
+        </rdf:type>
+        <studies rdf:resource="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CS101"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#CSModule"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Lecturer"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#MathModule"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/joaocosteira/ontos/main/university.owl#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
